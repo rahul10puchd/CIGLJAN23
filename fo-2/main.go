@@ -7,7 +7,6 @@ import (
 	"log"
 )
 
-//monorepo
 type Book struct {
 	Title  string `json:"booktitle"`
 	Author string `json:"author-1"`
