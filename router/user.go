@@ -11,6 +11,6 @@ func UserRouter(engine *gin.Engine) {
 	engine.POST("/user", controller.CreatePost)
 
 	//engine.PUT("/post", controller.GetPost)
-	engine.DELETE("/user", controller.DeletePost)
+	//engine.DELETE("/user", controller.DeletePost)
 	//engine.PATCH("/post", controller.GetPost)
 }

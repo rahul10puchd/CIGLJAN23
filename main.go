@@ -14,8 +14,9 @@ func main() {
 	if err != nil {
 		log.Fatal("Unable to establish DB connection", err)
 	} else {
-		log.Panicln("DB connection establsihed")
+		log.Println("DB connection establsihed")
 	}
+	//log.Println("------->>>>>>", db.GetDBConn())
 
 	router.PostRouter(r)
 	router.UserRouter(r)

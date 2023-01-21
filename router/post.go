@@ -9,8 +9,8 @@ import (
 func PostRouter(engine *gin.Engine) {
 	engine.GET("/post", controller.GetPost) //getPost this will come from controller
 	engine.POST("/post", controller.CreatePost)
-
-	//engine.PUT("/post", controller.GetPost)
-	engine.DELETE("/post", controller.DeletePost)
+	engine.GET("/post/:id", controller.GetPostById)
+	engine.PUT("/post", controller.UpdatePost)
+	engine.DELETE("/post/:id", controller.DeletePostByID)
 	//engine.PATCH("/post", controller.GetPost)
 }
