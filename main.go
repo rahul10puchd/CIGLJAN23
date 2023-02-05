@@ -40,7 +40,7 @@ func main() {
 
 	router.PostRouter(r)
 	router.UserRouter(r)
-	r.Run()
+	r.Run(":8070")
 
 	// post := map[string]string{
 	// 	"rahul": "jkghvkjhf",

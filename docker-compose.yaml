@@ -1,0 +1,29 @@
+version: "3.2"
+services:
+  postgres:
+    image: postgres
+    environment:
+      POSTGRES_DB: postgres
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      TZ: Asia/Kolkata
+    volumes:
+      - /user/rahul/postgres-data:/var/lib/postgresql/data/
+      - /user/rahul/postgres-init:/docker-entrypoint-initdb.d/
+    deploy:
+      mode: replicated
+      replicas: 1
+  crudapp:
+    image: crudapp
+    environment:
+      DBHost: postgres
+      DBUser: postgres
+      DBPassword: postgres
+      DBPort: 5432
+      DBName: postgres
+    deploy:
+      mode: replicated
+      replicas: 1
+    ports:
+      - "8070:8070"
+  
